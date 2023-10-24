@@ -1,0 +1,64 @@
+""" This is the main code file. I'll be writing all the code here. If any part of the code
+    written in another python file, it will be mentioned."""
+
+
+
+
+
+
+
+
+
+
+
+
+from math import *
+from tkinter import *
+from tkinter.messagebox import showinfo
+import tkinter.font as font
+
+root =  Tk()
+
+AddBank = Button(root,
+                 text = 'Add a New Account',
+                 background = 'gray',
+                 width = 15)
+DeleteBank = Button(root,
+                    text  = 'Delete an existing Account',
+                    background = 'gray',
+                    width = 18)
+AddInterest = Button (root,
+                      text = 'Add Monthly Interest',
+                      background = 'gray',
+                      width = 12)
+CurrentBalance = Button(root,
+                        background = 'gray',
+                        text = 'Show Current Balance',
+                        width = 16)
+
+AddBank.grid(row = 0, column = 0)
+DeleteBank.grid(row = 0, column = 1)
+AddInterest.grid(row = 0, column = 2)
+CurrentBalance.grid(row = 0, column = 3)
+
+'''MessageBox = Text(root,
+                  background= 'white',
+                  width = 50,
+                  height = 22)
+
+MessageBox.grid(column = 5)'''
+
+amountEntry = Entry(root,
+                     width = 10)
+
+deposit = Button(root,
+               text = 'Deposit',
+               width = 9)
+
+withdraw = Button(root,
+               text = 'Withdraw',
+               width = 10)
+
+amountEntry.grid(row = 5, column = 2)
+deposit.grid(row = 6, column = 1)
+withdraw.grid(row = 6, column = 2)

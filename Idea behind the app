@@ -1,0 +1,11 @@
+The app is supposed to be my personal project to practice coding, specifically Object Oriented Programming, GUIs,
+and other important fundamentals of Python. This will be deployed to Amazon Cloud EC2 and made public.
+
+The development stages of the app are:
+1. Build the Graphic User Interface
+2. Build the classes, write the functions.
+3. Then test it.
+4. Deploy it to Amazon Cloud EC2.
+
+
+The GUI is supposed to look like:
