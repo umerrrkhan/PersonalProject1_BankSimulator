@@ -5,60 +5,85 @@
 
 
 
-
-
-
-
-
-
-
 from math import *
 from tkinter import *
 from tkinter.messagebox import showinfo
 import tkinter.font as font
+
+
+def newAccount():
+    pass
+
+
+
+def deleteAccount():
+    pass
+
+
+def showBalance():
+    pass
+
+
+def addInterest():
+    pass
+
+
 
 root =  Tk()
 
 AddBank = Button(root,
                  text = 'Add a New Account',
                  background = 'gray',
-                 width = 15)
+                 width = 15).grid(row = 1, column = 0)
 DeleteBank = Button(root,
                     text  = 'Delete an existing Account',
                     background = 'gray',
-                    width = 18)
+                    width = 16).grid(row = 1, column = 1)
 AddInterest = Button (root,
                       text = 'Add Monthly Interest',
                       background = 'gray',
-                      width = 12)
+                      width = 12).grid(row = 1, column = 2)
 CurrentBalance = Button(root,
                         background = 'gray',
                         text = 'Show Current Balance',
-                        width = 16)
+                        width = 14).grid(row = 1,  column = 3)
 
-AddBank.grid(row = 0, column = 0)
-DeleteBank.grid(row = 0, column = 1)
-AddInterest.grid(row = 0, column = 2)
-CurrentBalance.grid(row = 0, column = 3)
+frame = Frame(root)
+frame.grid(row =  0,  column = 2)
 
-'''MessageBox = Text(root,
-                  background= 'white',
-                  width = 50,
-                  height = 22)
-
-MessageBox.grid(column = 5)'''
-
-amountEntry = Entry(root,
-                     width = 10)
-
-deposit = Button(root,
+amountEntry = Entry(frame,
+                    width = 12,
+                    background = 'black',
+                    foreground = 'white',
+                    relief =  RAISED)
+deposit = Button(frame,
                text = 'Deposit',
                width = 9)
-
-withdraw = Button(root,
+withdraw = Button(frame,
                text = 'Withdraw',
                width = 10)
 
-amountEntry.grid(row = 5, column = 2)
-deposit.grid(row = 6, column = 1)
-withdraw.grid(row = 6, column = 2)
+
+
+amountEntry.pack(side  = LEFT)
+deposit.pack()
+withdraw.pack()
+
+
+
+accountList = Listbox(root,
+                      width = 32,
+                      height = 19,
+                      relief =  SUNKEN)
+accountList.grid(row =0 , column = 0)
+
+
+
+MessageBox = Text(root,
+                  background= 'white',
+                  foreground = 'black',
+                  width = 38,
+                  height = 25,
+                  relief =  SUNKEN)
+
+MessageBox.grid(row = 0,column = 1)
