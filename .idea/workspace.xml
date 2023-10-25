@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af58b482-e8e3-4840-a381-9b2802442128" name="Changes" comment="">
+    <list default="true" id="af58b482-e8e3-4840-a381-9b2802442128" name="Changes" comment="I made progress on the code, and completed the application interface.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application Main" beforeDir="false" afterPath="$PROJECT_DIR$/Application Main" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +95,14 @@
       <option name="presentableId" value="Default" />
       <updated>1697961092917</updated>
     </task>
+    <task id="LOCAL-00001" summary="I made progress on the code, and completed the application interface.">
+      <created>1698123345601</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1698123345601</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -106,5 +115,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="I made progress on the code, and completed the application interface." />
+    <option name="LAST_COMMIT_MESSAGE" value="I made progress on the code, and completed the application interface." />
   </component>
 </project>
