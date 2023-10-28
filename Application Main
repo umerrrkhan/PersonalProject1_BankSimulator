@@ -11,17 +11,12 @@ from tkinter.messagebox import showinfo
 import tkinter.font as font
 
 
-from math import *
-from tkinter import *
-from tkinter.messagebox import showinfo
-import tkinter.font as font
-
-
 def newAccount():
 
-    global AddBank, DeleteBank, AddInterest, CurrentBalance, amountEntry, deposit, withdraw, accountList, MessageBox
+    global AddBank, DeleteBank, AddInterest, CurrentBalance, amountEntry, deposit, withdraw, accountList, MessageBox, accountName, initialDeposit
 
     secondary = Tk()
+    accountDict = {}
 
     label = Label(secondary,
                   text = 'Name of account and amount to deposit:')
@@ -34,7 +29,7 @@ def newAccount():
     button1 = Button(secondary,
                      text = 'OK',
                      width  =  5,
-                     command = secondary.destroy)
+                     command = MessageBox.insert('1.0',accountName.get()))
 
     label.grid(row = 0, column = 0)
     accountName.grid(row =  1, column = 0)
@@ -44,6 +39,8 @@ def newAccount():
     actName = accountName.get()
     initialAmt = initialDeposit.get()
 
+
+
 def deleteAccount():
 
     global AddBank, DeleteBank, AddInterest, CurrentBalance, amountEntry, deposit, withdraw, accountList, MessageBox
@@ -52,8 +49,16 @@ def deleteAccount():
 
 def showBalance():
 
-    global AddBank, DeleteBank, AddInterest, CurrentBalance, amountEntry, deposit, withdraw, accountList, MessageBox
-    pass
+    global AddBank, DeleteBank, AddInterest, CurrentBalance, amountEntry, deposit, withdraw, accountList, MessageBox, accountDict
+
+    banks = accountList.get
+
+    bankBal = banks.accountDict.get("balance")
+
+    MessageBox.insert('1.0', 'Your Selected Account Balance is ${}'.format(bankBal))
+
+
+
 
 
 def addInterest():
@@ -79,7 +84,8 @@ AddInterest = Button (root,
 CurrentBalance = Button(root,
                         background = 'gray',
                         text = 'Show Current Balance',
-                        width = 14).grid(row = 1,  column = 3)
+                        width = 14,
+                        command = showBalance).grid(row = 1,  column = 3)
 
 frame = Frame(root)
 frame.grid(row =  0,  column = 2)
@@ -124,6 +130,17 @@ MessageBox.grid(row = 0,column = 1)
 
 
 mainloop()
+
+
+
+
+
+
+
+
+
+
+
 
 
 
